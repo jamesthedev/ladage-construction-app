@@ -1,0 +1,9 @@
+body {
+  overflow-x: hidden;
+}
+
+#home-logo {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}
