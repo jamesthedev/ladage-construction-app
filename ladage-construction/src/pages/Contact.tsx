@@ -61,6 +61,11 @@ const Contact: React.FC = () => {
     <div className="container py-5 d-flex justify-content-center">
       <div className="w-100" style={{ maxWidth: '600px' }}>
         <h2 className="mb-4 text-center">Contact Us</h2>
+        {!submitted && (
+          <p className="mb-4 text-center">
+            Need a quote or just have a question? Fill out the form below and we’ll get back to you soon.
+          </p>
+        )}
 
         {submitted ? (
           <Alert variant="success" className="text-center">Thank you! Your message has been sent.</Alert>

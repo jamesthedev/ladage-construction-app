@@ -7,7 +7,10 @@ function Home() {
                 alt="Ladage Construction Logo"
             />
             <h1 className="mt-3">Ladage Construction</h1>
-            <p className="lead">Reliable. Local. Built to Last.</p>
+            <p className="lead">
+                Framing, remodels, and complete renovations backed by 30+ years of experience. 
+                Serving Austin, TX with quality craftsmanship and a client-first approach.
+            </p>
         </div>
     );
 }
