@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Card } from 'react-bootstrap';
 
 interface FormData {
   name: string;
@@ -59,20 +59,29 @@ const Contact: React.FC = () => {
 
   return (
     <div className="container py-5 d-flex justify-content-center">
-      <div className="w-100" style={{ maxWidth: '600px' }}>
-        <h2 className="mb-4 text-center">Contact Us</h2>
+      <Card className="shadow-sm w-100 p-4" style={{ maxWidth: '600px' }}>
+        <h2 className="text-center mb-3">Contact Us</h2>
         {!submitted && (
-          <p className="mb-4 text-center">
-            Need a quote or just have a question? Fill out the form below and we’ll get back to you soon.
-          </p>
+          <>
+            <p className="text-center text-muted mb-2">
+              Need a quote or just have a question? Fill out the form below and we’ll get back to you soon.
+            </p>
+            <p className="text-danger text-center mb-4">
+              Fields marked with <span className="fw-bold">*</span> are required.
+            </p>
+          </>
         )}
 
         {submitted ? (
-          <Alert variant="success" className="text-center">Thank you! Your message has been sent.</Alert>
+          <Alert variant="success" className="text-center">
+            Thank you! Your message has been sent.
+          </Alert>
         ) : (
           <Form onSubmit={handleSubmit} noValidate>
             <Form.Group className="mb-3" controlId="formName">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>
+                Name <span className="text-danger fw-bold">*</span>
+              </Form.Label>
               <Form.Control
                 type="text"
                 name="name"
@@ -86,7 +95,9 @@ const Contact: React.FC = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formEmail">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>
+                Email <span className="text-danger fw-bold">*</span>
+              </Form.Label>
               <Form.Control
                 type="email"
                 name="email"
@@ -100,7 +111,9 @@ const Contact: React.FC = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formPhone">
-              <Form.Label>Phone</Form.Label>
+              <Form.Label>
+                Phone <span className="text-danger fw-bold">*</span>
+              </Form.Label>
               <Form.Control
                 type="tel"
                 name="phone"
@@ -113,8 +126,10 @@ const Contact: React.FC = () => {
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formMessage">
-              <Form.Label>Message</Form.Label>
+            <Form.Group className="mb-4" controlId="formMessage">
+              <Form.Label>
+                Message <span className="text-danger fw-bold">*</span>
+              </Form.Label>
               <Form.Control
                 as="textarea"
                 rows={4}
@@ -128,14 +143,16 @@ const Contact: React.FC = () => {
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Button variant="primary" type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'Sending...' : 'Submit'}
-            </Button>
+            <div className="d-grid">
+              <Button variant="primary" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </Button>
+            </div>
           </Form>
         )}
 
         {/* TODO: Show an error message if the AWS email send fails */}
-      </div>
+      </Card>
     </div>
   );
 };
