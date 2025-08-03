@@ -9,8 +9,8 @@ function Home() {
     return (
         <>
             <Hero />
-            <AboutUs />
             <FeaturedProject />
+            <AboutUs />
             <Services />
             <Testimonials />
             <CallToAction />
