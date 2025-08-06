@@ -22,7 +22,7 @@ function Navbar() {
       <nav className="navbar navbar-light bg-light px-3 py-2 border-bottom fixed-top">
         <div className="container-fluid d-flex justify-content-between align-items-center">
           {/* Left: Logo + Business Name */}
-          <a className="navbar-brand d-flex align-items-center" href="/">
+          <a className="navbar-brand d-flex align-items-center" href="./">
             <img
               src="./ladage-logo-transparent.png"
               alt="Logo"
@@ -65,7 +65,7 @@ function Navbar() {
         />
       )}
 
-      {/* Slide-in Drawer */}
+      {/* Slide-in Drawer (mobile)*/}
       <div
         ref={menuRef}
         className="position-fixed top-0 end-0 bg-white h-100 shadow-lg px-4 pt-5"
@@ -87,13 +87,13 @@ function Navbar() {
 
         <ul className="nav flex-column mt-4 fs-5">
           <li className="nav-item mb-3">
-            <a href="/" className="nav-link text-dark" onClick={() => setIsOpen(false)}>Home</a>
+            <a href="./" className="nav-link text-dark" onClick={() => setIsOpen(false)}>Home</a>
           </li>
           <li className="nav-item mb-3">
-            <a href="/ourwork" className="nav-link text-dark" onClick={() => setIsOpen(false)}>Our Work</a>
+            <a href="./ourwork" className="nav-link text-dark" onClick={() => setIsOpen(false)}>Our Work</a>
           </li>
           <li className="nav-item mb-3">
-            <a href="/contact" className="nav-link text-dark" onClick={() => setIsOpen(false)}>Contact</a>
+            <a href="./contact" className="nav-link text-dark" onClick={() => setIsOpen(false)}>Contact</a>
           </li>
         </ul>
       </div>

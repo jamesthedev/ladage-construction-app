@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                     <div className="col-md-4 mb-4 mb-md-0">
                         <h6 className="fw-bold mb-2">Quick Links</h6>
                         <ul className="list-unstyled">
-                            <li><a href="/" className="text-muted text-decoration-none">Home</a></li>
+                            <li><a href="./" className="text-muted text-decoration-none">Home</a></li>
                             <li><a href="./ourwork" className="text-muted text-decoration-none">Our Work</a></li>
                             <li><a href="./contact" className="text-muted text-decoration-none">Contact</a></li>
                         </ul>
