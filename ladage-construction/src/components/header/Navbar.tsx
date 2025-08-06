@@ -24,7 +24,7 @@ function Navbar() {
           {/* Left: Logo + Business Name */}
           <a className="navbar-brand d-flex align-items-center" href="/">
             <img
-              src="/ladage-logo-transparent.png"
+              src="./ladage-logo-transparent.png"
               alt="Logo"
               className="me-2 img-fluid"
               style={{ maxHeight: '60px' }}
@@ -44,13 +44,13 @@ function Navbar() {
           {/* Desktop Nav Links */}
           <ul className="navbar-nav ms-auto d-none d-lg-flex flex-row gap-4">
             <li className="nav-item">
-              <a className="nav-link fs-5" href="/">Home</a>
+              <a className="nav-link fs-5" href="./">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-5" href="/ourwork">Our Work</a>
+              <a className="nav-link fs-5" href="./ourwork">Our Work</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-5" href="/contact">Contact</a>
+              <a className="nav-link fs-5" href="./contact">Contact</a>
             </li>
           </ul>
         </div>

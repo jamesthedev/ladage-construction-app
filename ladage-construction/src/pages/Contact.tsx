@@ -64,10 +64,7 @@ const Contact: React.FC = () => {
         {!submitted && (
           <>
             <p className="text-center text-muted mb-2">
-              Need a quote or just have a question? Fill out the form below and we’ll get back to you soon.
-            </p>
-            <p className="text-danger text-center mb-4">
-              Fields marked with <span className="fw-bold">*</span> are required.
+              Need a quote or just have a question? Fill out the form below and we'll get back to you soon.
             </p>
           </>
         )}

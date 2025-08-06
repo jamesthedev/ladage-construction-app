@@ -12,7 +12,7 @@ function AboutUs() {
             <div className="col-md-7 pe-md-5" style={{ textAlign: 'justify' }}>
               <p>
                 At <strong>Ladage Construction</strong>, we are more than just a construction company.
-                We’re a family-owned and operated business proudly serving Oklahoma with craftsmanship,
+                We're a family-owned and operated business proudly serving Austin, Texas with craftsmanship,
                 integrity, and lasting results.
               </p>
               <p>
@@ -22,7 +22,7 @@ function AboutUs() {
               </p>
               <p>
                 We believe in strong communication, fair pricing, and exceeding expectations at every turn.
-                Your vision is our blueprint, and we’re honored to help bring it to life.
+                Your vision is our blueprint, and we're honored to help bring it to life.
               </p>
               <p className="fw-semibold text-muted">
                 Thank you for trusting Ladage Construction. We look forward to building with you!
@@ -32,7 +32,7 @@ function AboutUs() {
             {/* Image Column */}
             <div className="col-md-5 text-center mt-4 mt-md-0">
               <img
-                src="/ladage-logo.jpg"
+                src="./ladage-logo.jpg"
                 alt="Ladage Construction team or project"
                 className="img-fluid rounded shadow"
                 style={{ maxHeight: '350px', objectFit: 'cover' }}

@@ -9,7 +9,7 @@ function FeaturedProject() {
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
               <img
-                src="/projects/featured.jpg"
+                src="./projects/featured.jpg"
                 alt="Carousel of a featured project"
                 className="img-fluid rounded shadow"
               />
