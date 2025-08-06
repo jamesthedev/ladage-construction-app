@@ -10,7 +10,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/ladage-construction">
+    <BrowserRouter basename="/ladage-construction-app">
       <App />    
     </BrowserRouter>    
   </StrictMode>
