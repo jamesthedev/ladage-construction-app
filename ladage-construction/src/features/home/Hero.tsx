@@ -12,7 +12,7 @@ function Hero() {
               <p className="lead">
                 Welcome to Ladage Construction — your trusted partner in quality construction.
               </p>
-              <a href="/contact" className="btn btn-primary btn-lg mt-3">
+              <a href="./contact" className="btn btn-primary btn-lg mt-3">
                 Get a Free Quote
               </a>
             </div>
@@ -20,7 +20,7 @@ function Hero() {
             {/* Right image (optional) */}
             <div className="col-lg-6 text-center">
               <img
-                src="/images/house.jpg"
+                src="./images/house.jpg"
                 alt="Construction site"
                 className="img-fluid rounded shadow"
                 style={{ maxHeight: '400px', objectFit: 'cover', width: '100%' }}

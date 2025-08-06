@@ -10,19 +10,19 @@ function Testimonials() {
             <div className="col-md-4 mb-4">
               <blockquote className="blockquote">
                 <p className="mb-0">"The team at Ladage exceeded our expectations. Professional, punctual, and flawless execution!"</p>
-                <footer className="blockquote-footer mt-2">Sarah J., Edmond</footer>
+                <footer className="blockquote-footer mt-2">Sarah J.</footer>
               </blockquote>
             </div>
             <div className="col-md-4 mb-4">
               <blockquote className="blockquote">
-                <p className="mb-0">"We couldn’t be happier with our new deck. Highly recommend!"</p>
-                <footer className="blockquote-footer mt-2">Mike L., Yukon</footer>
+                <p className="mb-0">"We couldn't be happier with our new deck. Highly recommend!"</p>
+                <footer className="blockquote-footer mt-2">Mike L.</footer>
               </blockquote>
             </div>
             <div className="col-md-4 mb-4">
               <blockquote className="blockquote">
                 <p className="mb-0">"Fast, clean, and on budget. What more could you ask for?"</p>
-                <footer className="blockquote-footer mt-2">Anna R., Mustang</footer>
+                <footer className="blockquote-footer mt-2">Anna R.</footer>
               </blockquote>
             </div>
           </div>
