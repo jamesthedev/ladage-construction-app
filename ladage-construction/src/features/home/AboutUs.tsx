@@ -2,8 +2,8 @@ import FadeUpSection from "../../components/animations/FadeUpSection";
 
 function AboutUs() {
   return (
-    <FadeUpSection delay={0.3}>
-      <section className="py-5 px-2 bg-white">
+    <FadeUpSection delay={0.3} >
+      <section className="py-5 px-2  about-us-wrapper">
         <div className="container">
           <h2 className="fw-bold text-center mb-5">About Us</h2>
           <div className="row align-items-center">
@@ -24,7 +24,7 @@ function AboutUs() {
                 We believe in strong communication, fair pricing, and exceeding expectations at every turn.
                 Your vision is our blueprint, and we're honored to help bring it to life.
               </p>
-              <p className="fw-semibold text-muted">
+              <p className="fw-semibold">
                 Thank you for trusting Ladage Construction. We look forward to building with you!
               </p>
             </div>
