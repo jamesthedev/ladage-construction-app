@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="py-5 d-flex justify-content-center">
-      <Card className="contact-card rounded shadow-sm p-4">
+      <Card className="rounded shadow-sm p-4 contact-card">
         <h2 className="text-center mb-3">Contact Us</h2>
         {!submitted && (
           <p className="text-center text-muted mb-2">
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
             Thank you! Your message has been sent.
           </Alert>
         ) : (
-          <Form onSubmit={handleSubmit} noValidate>
+          <Form autoComplete="on" onSubmit={handleSubmit} noValidate>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>
                 Name <span className="text-danger fw-bold">*</span>
@@ -81,6 +81,7 @@ const Contact: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 isInvalid={!!formErrors.name}
+                autoComplete="name"
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.name}
@@ -97,6 +98,7 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 isInvalid={!!formErrors.email}
+                autoComplete="email"
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.email}
@@ -113,6 +115,7 @@ const Contact: React.FC = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 isInvalid={!!formErrors.phone}
+                autoComplete="tel"
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.phone}
@@ -130,6 +133,7 @@ const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 isInvalid={!!formErrors.message}
+                autoComplete="on"
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.message}

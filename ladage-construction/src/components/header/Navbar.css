@@ -69,7 +69,7 @@
   line-height: 1;
 }
 
-/* On extra small screens truncate text */
+/* On small screens shorten text */
 @media (max-width: 410px) {
   .brand-name {
     font-size: 1rem;
@@ -77,6 +77,13 @@
 
   .brand-sub {
     font-size: 0.5rem;
+  }
+}
+
+/* On very small screens hide text */
+@media (max-width: 344px) {
+  .brand-sub {
+    display: none;
   }
 }
 

@@ -53,9 +53,11 @@ body {
   color: #fff;
 }
 .btn-accent:hover,
-.btn-accent:focus {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
+.btn-accent:focus,
+.btn-orange:active,
+.btn-orange:focus:active {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
   color: #fff;
 }
 
@@ -78,9 +80,9 @@ body {
 }
 
 .contact-card {
-  width: 100%;
   max-width: 800px;              
   min-width: var(--navbar-min);  
   border-radius: 1rem;
   border: none;
+  margin: 1rem;
 }
