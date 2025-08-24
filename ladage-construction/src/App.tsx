@@ -13,7 +13,7 @@ function App() {
       <div className="flex-grow-1 app-main" style={{ paddingTop: '72px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ourwork" element={<OurWork />} />
+          <Route path="/gallery" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

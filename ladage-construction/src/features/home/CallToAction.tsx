@@ -1,5 +1,3 @@
-import FadeUpSection from "../../components/animations/FadeUpSection";
-
 function CallToAction() {
   return (
     <section className="py-5 bg-primary text-white text-center">

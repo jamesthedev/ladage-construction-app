@@ -50,9 +50,6 @@ const Gallery: React.FC = () => {
       <section className="container py-5">
         <div className="text-center mb-5">
           <h2 className="text-center mb-3">Our Work</h2>
-          <div className="d-flex justify-content-center mb-3">
-            <div style={{ width: "80px", height: "4px", background: "grey", borderRadius: "2px" }}></div>
-          </div>
           <p className="text-muted">
             A showcase of projects we're proud to share.
           </p>

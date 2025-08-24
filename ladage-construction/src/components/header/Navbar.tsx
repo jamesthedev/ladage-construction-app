@@ -44,14 +44,14 @@ const AppNavbar: React.FC = () => {
             />
           </Navbar.Toggle>
 
-          {/* Right: links (Home, Our Work, Contact Us) */}
+          {/* Right: links */}
           <Navbar.Collapse id="mainNav">
             <Nav className="ms-auto align-items-lg-center gap-lg-3">
               <Nav.Link href="./" onClick={close} className="text-dark fw-semibold text-nowrap">
                 Home
               </Nav.Link>
-              <Nav.Link href="./ourwork" onClick={close} className="text-dark fw-semibold text-nowrap">
-                Our Work
+              <Nav.Link href="./gallery" onClick={close} className="text-dark fw-semibold text-nowrap">
+                Gallery
               </Nav.Link>
               <a
                 href="./contact"
