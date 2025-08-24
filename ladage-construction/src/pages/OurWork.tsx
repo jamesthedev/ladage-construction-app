@@ -67,7 +67,7 @@ const Gallery: React.FC = () => {
                   key={cat.key}
                   className={`category-buttons btn rounded-pill ${activeCategory === cat.key
                     ? "btn-primary text-white"
-                    : "btn-outline-primary"
+                    : "btn-outline-primary btn-primary-inactive"
                     }`}
                   onClick={() => setActiveCategory(cat.key)}
                 >

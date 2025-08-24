@@ -27,7 +27,8 @@ body {
 .about-us-wrapper {
   position: relative;
   color: white;
-  background-color: rgba(0,0,0,0.60) !important; 
+  background-color: rgba(0,0,0,0.95) !important; 
+  z-index: 0;
 }
 
 .about-us-wrapper::before {
@@ -40,7 +41,7 @@ body {
   background-image: url("./austin-cityline.jpg") !important;
   background-size: cover;
   background-position: center;
-  opacity: 0.80;
+  opacity: 0.30;
   z-index: -1;
 }
 
@@ -57,4 +58,50 @@ body {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   color: #fff;
+}
+
+/* .btn-primary {
+  --accent-hover: green;
+  --accent: #05bd36;
+  background-color: #05bd36;
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+.btn-outline-primary {
+  --accent-hover: green;
+  --accent: #05bd36;
+  background-color: transparent;
+  border-color: var(--accent);
+  color: black;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+} */
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: #555;
+  padding: 0.4rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: #ff6a2a;
+}
+
+.filter-btn.active {
+  color: #ff6a2a;
+  border-bottom: 2px solid #ff6a2a;
 }

@@ -45,8 +45,8 @@
   content: "Ladage Construction";
 }
 
-/* On extra small screens (≤ 375px wide), truncate text */
-@media (max-width: 400px) {
+/* On extra small screens truncate text */
+@media (max-width: 384px) {
   .brand-text::after {
     content: "Ladage"; /* shorter name */
   }
