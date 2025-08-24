@@ -23,7 +23,6 @@ const Contact: React.FC = () => {
 
   const validate = () => {
     const errors: Partial<FormData> = {};
-
     if (!formData.name.trim()) errors.name = 'Name is required.';
     if (!formData.email.trim()) errors.email = 'Email is required.';
     if (!formData.phone.trim()) {
@@ -48,7 +47,6 @@ const Contact: React.FC = () => {
 
     if (validate()) {
       setIsSubmitting(true);
-
       // TODO: Replace this spoofed submit with AWS Lambda + SES integration
       setTimeout(() => {
         setSubmitted(true);
@@ -58,15 +56,13 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="container py-5 d-flex justify-content-center">
-      <Card className="shadow-sm w-100 p-4" style={{ maxWidth: '600px', boxShadow: "100px rgba(0,0,0,.15) !important" }}>
+    <div className="py-5 d-flex justify-content-center">
+      <Card className="contact-card rounded shadow-sm p-4">
         <h2 className="text-center mb-3">Contact Us</h2>
         {!submitted && (
-          <>
-            <p className="text-center text-muted mb-2">
-              Need a quote or just have a question? Fill out the form below and we'll get back to you soon.
-            </p>
-          </>
+          <p className="text-center text-muted mb-2">
+            Need a quote or just have a question? Fill out the form below and we'll get back to you soon.
+          </p>
         )}
 
         {submitted ? (
@@ -147,8 +143,6 @@ const Contact: React.FC = () => {
             </div>
           </Form>
         )}
-
-        {/* TODO: Show an error message if the AWS email send fails */}
       </Card>
     </div>
   );
