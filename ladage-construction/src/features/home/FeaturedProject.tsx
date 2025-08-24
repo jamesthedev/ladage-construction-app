@@ -21,7 +21,7 @@ function FeaturedProject() {
                 lighting, high-end materials, and expert craftsmanship. The client's vision was brought
                 to life with precision and care.
               </p>
-              <a href="./ourwork" className="btn btn-primary-active mt-2">
+              <a href="./ourwork" className="btn btn-primary mt-2 ">
                 See More Projects
               </a>
             </div>

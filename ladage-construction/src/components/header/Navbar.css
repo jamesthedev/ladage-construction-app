@@ -65,6 +65,59 @@
 .pillbar  {
   display: block;
   padding: 0.75rem 1rem;
-  border-radius: 50px !important; /* no pill rounding here */
+  border-radius: 30px !important; /* no pill rounding here */
 }
+
+/* Base line */
+.navbar-toggler-icon {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--bs-gray-800);
+  transition: transform 0.3s ease;
+}
+
+/* Top + bottom bars */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--bs-gray-800);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler-icon::after  { top: 7px; }
+
+/* Light variant */
+.navbar-dark .navbar-toggler-icon,
+.navbar-dark .navbar-toggler-icon::before,
+.navbar-dark .navbar-toggler-icon::after {
+  background-color: var(--bs-gray-100);
+}
+
+/* Open state (turns into X) */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  opacity: 0; /* hide top line */
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  transform: rotate(-90deg);
+  top: 0; /* align with middle line */
+}
+
+.custom-toggle.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: .2rem .35rem;
+}
+.custom-toggle.navbar-toggler:focus { box-shadow: none; outline: 2px solid #ff6a2a; outline-offset: 2px; }
+
 
