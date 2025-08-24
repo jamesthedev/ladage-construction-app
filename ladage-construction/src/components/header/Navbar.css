@@ -10,8 +10,9 @@
 .pillbar {
   border-radius: 9999px;
   padding: .5rem 1rem;
-  background: rgba(255, 255, 255, 0.85); /* lighter & semi-transparent */
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  background: rgba(255, 255, 255, 0.85);
+  /* lighter & semi-transparent */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
   backdrop-filter: blur(8px) saturate(180%);
 }
 
@@ -21,9 +22,10 @@
   border-radius: 9999px;
   transition: background-color .2s ease, color .2s ease;
 }
+
 .pillbar .nav-link:hover,
 .pillbar .nav-link:focus {
-  background: rgba(0,0,0,.05);
+  background: rgba(0, 0, 0, .05);
   color: #000;
 }
 
@@ -33,19 +35,27 @@
   width: auto;
   object-fit: contain;
 }
+
 @media (min-width: 992px) {
-  .brand-logo { height: 32px; }
+  .brand-logo {
+    height: 32px;
+  }
 }
 
 @media (max-width: 992px) {
-    .pillbar { padding: 0.3rem 0.3rem !important; }
-    .btn-accent { margin-bottom: 0.5rem; }
+  .pillbar {
+    padding: 0.3rem 0.3rem !important;
+  }
+
+  .btn-accent {
+    margin-bottom: 0.5rem;
+  }
 }
 
-.brand-name { 
+.brand-name {
   font-family: "Bodoni Moda", "Abril Fatface", serif;
-  font-weight: 900;           
-  letter-spacing: 0.02em;     
+  font-weight: 900;
+  letter-spacing: 0.02em;
   line-height: 1;
   font-size: 1.25rem;
 }
@@ -54,8 +64,9 @@
   margin-left: 0.25rem;
   font-family: "Bodoni Moda", "Abril Fatface", serif;
   font-weight: 600;
-  letter-spacing: 0.35em;     
+  letter-spacing: 0.35em;
   font-size: 0.75rem;
+  line-height: 1;
 }
 
 /* On extra small screens truncate text */
@@ -71,17 +82,17 @@
 
 /* Reset collapse area so it fills properly */
 .pillbar .navbar-collapse {
-  background: transparent; 
+  background: transparent;
   border-radius: 0;
   box-shadow: none;
   width: 100%;
 }
 
 /* Nav inside collapse */
-.pillbar  {
+.pillbar {
   display: block;
   padding: 0.75rem 1rem;
-  border-radius: 30px !important; 
+  border-radius: 30px !important;
 }
 
 /* Base line */
@@ -105,8 +116,13 @@
   transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-.navbar-toggler-icon::before { top: -7px; }
-.navbar-toggler-icon::after  { top: 7px; }
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
 
 /* Light variant */
 .navbar-dark .navbar-toggler-icon,
@@ -121,12 +137,14 @@
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
-  opacity: 0; /* hide top line */
+  opacity: 0;
+  /* hide top line */
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   transform: rotate(-90deg);
-  top: 0; /* align with middle line */
+  top: 0;
+  /* align with middle line */
 }
 
 .custom-toggle.navbar-toggler {
@@ -134,5 +152,9 @@
   background: transparent;
   padding: .2rem .35rem;
 }
-.custom-toggle.navbar-toggler:focus { box-shadow: none; outline: 2px solid #ff6a2a; outline-offset: 2px; }
 
+.custom-toggle.navbar-toggler:focus {
+  box-shadow: none;
+  outline: 2px solid #ff6a2a;
+  outline-offset: 2px;
+}

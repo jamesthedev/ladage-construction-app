@@ -21,7 +21,7 @@ const AppNavbar: React.FC = () => {
           {/* Left: Brand with logo + text */}
           <Navbar.Brand href="./" className="fw-bold text-dark d-flex align-items-center brand">
             <img
-              src="./ladage-logo-notext.png"
+              src="./ladage-logo.jpg"
               alt="Ladage Construction logo"
               className="brand-logo me-2"
             />
