@@ -20,8 +20,8 @@ function Hero() {
             {/* Right image (optional) */}
             <div className="col-lg-6 text-center">
               <img
-                src="./images/house.jpg"
-                alt="Construction site"
+                src="./ladage-logo.jpg"
+                alt="Construction crew"
                 className="img-fluid rounded shadow"
                 style={{ maxHeight: '400px', objectFit: 'cover', width: '100%' }}
               />

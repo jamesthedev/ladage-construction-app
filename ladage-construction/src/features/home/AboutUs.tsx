@@ -32,7 +32,7 @@ function AboutUs() {
             {/* Image Column */}
             <div className="col-md-5 text-center mt-4 mt-md-0">
               <img
-                src="./ladage-logo.jpg"
+                src="./construction-crew.png"
                 alt="Ladage Construction team or project"
                 className="img-fluid rounded shadow"
                 style={{ maxHeight: '350px', objectFit: 'cover' }}

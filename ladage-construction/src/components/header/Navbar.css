@@ -37,7 +37,6 @@
   .brand-logo { height: 32px; }
 }
 
-/* Optional: keep brand text from wrapping oddly */
 .brand-text { line-height: 1; white-space: nowrap; }
 
 /* Default (desktop/tablet) shows full name */
@@ -57,7 +56,6 @@
   background: transparent; /* no pillbox background */
   border-radius: 0;
   box-shadow: none;
-  margin-top: 0.5rem; /* spacing from brand/toggler */
   width: 100%;
 }
 
@@ -121,3 +119,6 @@
 .custom-toggle.navbar-toggler:focus { box-shadow: none; outline: 2px solid #ff6a2a; outline-offset: 2px; }
 
 
+.navlink {
+  
+}
