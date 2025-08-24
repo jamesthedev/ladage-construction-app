@@ -3,7 +3,7 @@ import FadeUpSection from "../../components/animations/FadeUpSection";
 function FeaturedProject() {
   return (
     <FadeUpSection>
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-white">
         <div className="container">
           <h2 className="fw-bold text-center mb-4">Featured Project</h2>
           <div className="row align-items-center">
@@ -21,7 +21,7 @@ function FeaturedProject() {
                 lighting, high-end materials, and expert craftsmanship. The client's vision was brought
                 to life with precision and care.
               </p>
-              <a href="./ourwork" className="btn btn-outline-primary mt-2">
+              <a href="./ourwork" className="btn btn-primary-active mt-2">
                 See More Projects
               </a>
             </div>

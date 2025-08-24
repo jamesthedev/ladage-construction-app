@@ -3,7 +3,7 @@ import FadeUpSection from "../../components/animations/FadeUpSection";
 function Testimonials() {
   return (
     <FadeUpSection>
-      <section className="py-5 bg-light text-center">
+      <section className="py-5 bg-white text-center">
         <div className="container">
           <h2 className="fw-bold mb-4">What Our Clients Say</h2>
           <div className="row">
