@@ -25,10 +25,10 @@ const AppNavbar: React.FC = () => {
               alt="Ladage Construction logo"
               className="brand-logo me-2"
             />
-            <span className="brand-text">{/* populated in Navbar.css */}</span>
+            <span className="brand-name">LADAGE</span>
+            <span className="brand-sub">CONSTRUCTION</span>
           </Navbar.Brand>
 
-          {/* Custom hamburger (uses hamburger-react) */}
           <Navbar.Toggle
             aria-controls="mainNav"
             aria-label="Toggle navigation"
@@ -37,9 +37,9 @@ const AppNavbar: React.FC = () => {
             <Hamburger
               toggled={expanded}
               toggle={setExpanded}
-              size={22}                 // tweak size if needed
+              size={22}
               duration={0.25}
-              color="#2b2b2b"           // use #fff if you switch to dark bg
+              color="#2b2b2b"
               rounded
             />
           </Navbar.Toggle>

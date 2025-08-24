@@ -39,19 +39,33 @@
 
 @media (max-width: 992px) {
     .pillbar { padding: 0.3rem 0.3rem !important; }
+    .btn-accent { margin-bottom: 0.5rem; }
 }
 
-.brand-text { line-height: 1; white-space: nowrap; }
+.brand-name { 
+  font-family: "Bodoni Moda", "Abril Fatface", serif;
+  font-weight: 900;           
+  letter-spacing: 0.02em;     
+  line-height: 1;
+  font-size: 1.25rem;
+}
 
-/* Default (desktop/tablet) shows full name */
-.brand-text::after {
-  content: "Ladage Construction";
+.brand-sub {
+  margin-left: 0.25rem;
+  font-family: "Bodoni Moda", "Abril Fatface", serif;
+  font-weight: 600;
+  letter-spacing: 0.35em;     
+  font-size: 0.75rem;
 }
 
 /* On extra small screens truncate text */
-@media (max-width: 384px) {
-  .brand-text::after {
-    content: "Ladage"; /* shorter name */
+@media (max-width: 410px) {
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-sub {
+    font-size: 0.5rem;
   }
 }
 
@@ -122,7 +136,3 @@
 }
 .custom-toggle.navbar-toggler:focus { box-shadow: none; outline: 2px solid #ff6a2a; outline-offset: 2px; }
 
-
-.navlink {
-  
-}
