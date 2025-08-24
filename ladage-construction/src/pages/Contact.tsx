@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="container py-5 d-flex justify-content-center">
-      <Card className="shadow-sm w-100 p-4" style={{ maxWidth: '600px' }}>
+      <Card className="shadow-sm w-100 p-4" style={{ maxWidth: '600px', boxShadow: "100px rgba(0,0,0,.15) !important" }}>
         <h2 className="text-center mb-3">Contact Us</h2>
         {!submitted && (
           <>

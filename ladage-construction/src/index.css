@@ -9,10 +9,9 @@ body {
 }
 
 .my-masonry-grid {
-  display: flex;
+  display: flex; 
   margin-left: -1rem;
-  /* gutter size */
-  width: auto;
+  width: auto; 
 }
 
 .my-masonry-grid_column {
@@ -28,8 +27,7 @@ body {
 .about-us-wrapper {
   position: relative;
   color: white;
-  background-color: rgba(0,0,0,0.60); 
-  /* filter: drop-shadow(0 0 6px black); */
+  background-color: rgba(0,0,0,0.60) !important; 
 }
 
 .about-us-wrapper::before {
@@ -39,9 +37,24 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./austin-cityline.jpg");
+  background-image: url("./austin-cityline.jpg") !important;
   background-size: cover;
   background-position: center;
   opacity: 0.80;
   z-index: -1;
+}
+
+/* Accent button (orange) */
+.btn-accent {
+  --accent: #ff6a2a;
+  --accent-hover: #e3581f;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
 }
