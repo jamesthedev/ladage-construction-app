@@ -3,6 +3,7 @@ import Masonry from "react-masonry-css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FadeInSection from "../components/animations/FadeInSection";
 import FadeUpSection from "../components/animations/FadeUpSection";
+import CallToAction from "../features/home/CallToAction";
 
 
 // Example images – replace with your real construction project images
@@ -45,63 +46,62 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <section className="container py-5">
-      <div className="text-center mb-5">
-        <h2 className="text-center mb-3">Our Work</h2>
-        <div className="d-flex justify-content-center mb-3">
-          <div style={{ width: "80px", height: "4px", background: "grey", borderRadius: "2px" }}></div>
+    <>
+      <section className="container py-5">
+        <div className="text-center mb-5 our-work-header">
+          <h2 className="text-center mb-3">Our Work</h2>
+          <p className="text-muted">
+            A showcase of projects we're proud to share.
+          </p>
         </div>
-        <p className="text-muted">
-          A showcase of projects we're proud to share.
-        </p>
-      </div>
 
-      {/* Category Buttons with full-width background */}
-      <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", background: "#f8f9fa" }} className="bg-light">
-        <FadeInSection delay={0.4}>
-          <div className="container py-3">
-            {/* Category Buttons */}
-            <div className="d-flex justify-content-center mb-4 flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat.key}
-                  className={`category-buttons btn rounded-pill ${activeCategory === cat.key
-                    ? "btn-primary text-white"
-                    : "btn-outline-primary btn-primary-inactive"
-                    }`}
-                  onClick={() => setActiveCategory(cat.key)}
-                >
-                  {cat.label}
-                </button>
-              ))}
+        {/* Category Buttons with full-width background */}
+        <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", background: "#f8f9fa" }} className="bg-light">
+          <FadeInSection delay={0.4}>
+            <div className="container">
+              {/* Category Buttons */}
+              <div className="d-flex justify-content-center flex-wrap gap-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.key}
+                    className={`category-buttons btn rounded-pill ${activeCategory === cat.key
+                      ? "btn-primary text-white"
+                      : "btn-outline-primary"
+                      }`}
+                    onClick={() => setActiveCategory(cat.key)}
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        </FadeInSection>
-      </div>
+          </FadeInSection>
+        </div>
 
-      {/* Masonry Gallery with full-width background */}
-      <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", background: "#f8f9fa" }}>
-        <FadeUpSection delay={0.7}>
-          <div className="container py-4">
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
-            >
-              {filteredImages.map((img, idx) => (
-                <div key={idx} className="mb-4">
-                  <img
-                    src={img.src}
-                    alt={img.category}
-                    className="img-fluid rounded shadow-sm"
-                  />
-                </div>
-              ))}
-            </Masonry>
-          </div>
-        </FadeUpSection>
-      </div>
-    </section>
+        <div>
+          <FadeUpSection delay={0.5}>
+            <div className="container py-4">
+              <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
+                {filteredImages.map((img, idx) => (
+                  <div key={idx} className="mb-4">
+                    <img
+                      src={img.src}
+                      alt={img.category}
+                      className="img-fluid rounded shadow-sm"
+                    />
+                  </div>
+                ))}
+              </Masonry>
+            </div>
+          </FadeUpSection>
+        </div>
+      </section>
+      <div className="gallery-call-to-action"><CallToAction /></div>
+    </>
   );
 };
 

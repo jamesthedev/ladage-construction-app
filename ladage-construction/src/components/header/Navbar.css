@@ -10,8 +10,9 @@
 .pillbar {
   border-radius: 9999px;
   padding: .5rem 1rem;
-  background: rgba(255, 255, 255, 0.85); /* lighter & semi-transparent */
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  background: rgba(255, 255, 255, 0.85);
+  /* lighter & semi-transparent */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
   backdrop-filter: blur(8px) saturate(180%);
 }
 
@@ -21,51 +22,79 @@
   border-radius: 9999px;
   transition: background-color .2s ease, color .2s ease;
 }
+
 .pillbar .nav-link:hover,
 .pillbar .nav-link:focus {
-  background: rgba(0,0,0,.05);
+  background: rgba(0, 0, 0, .05);
   color: #000;
 }
 
-/* Brand image sizing */
 .brand-logo {
-  height: 28px;
+  height: 35px;
   width: auto;
   object-fit: contain;
 }
-@media (min-width: 992px) {
-  .brand-logo { height: 32px; }
+
+.brand-name {
+  font-family: "Bodoni Moda", "Abril Fatface", serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-size: 1.25rem;
 }
 
-/* Optional: keep brand text from wrapping oddly */
-.brand-text { line-height: 1; white-space: nowrap; }
-
-/* Default (desktop/tablet) shows full name */
-.brand-text::after {
-  content: "Ladage Construction";
+.brand-sub {
+  margin-left: 0.25rem;
+  font-family: "Bodoni Moda", "Abril Fatface", serif;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
-/* On extra small screens truncate text */
-@media (max-width: 384px) {
-  .brand-text::after {
-    content: "Ladage"; /* shorter name */
+.brand-sub-short {
+  display: none;
+}
+
+/* On small screens shorten text */
+@media (max-width: 462px) {
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .brand-sub {
+    font-size: 0.4rem;
+  }
+
+  .brand-logo {
+    height: 30px;
+  }
+}
+
+/* On very small screens hide text */
+@media (max-width: 360px) {
+  .brand-sub {
+    display: none;
+  }
+
+  .brand-sub-short {
+    display: inline;
   }
 }
 
 /* Reset collapse area so it fills properly */
 .pillbar .navbar-collapse {
-  background: transparent; /* no pillbox background */
+  background: transparent;
   border-radius: 0;
   box-shadow: none;
-  margin-top: 0.5rem; /* spacing from brand/toggler */
   width: 100%;
 }
 
 /* Nav inside collapse */
-.pillbar  {
+.pillbar {
   display: block;
   padding: 0.75rem 1rem;
-  border-radius: 30px !important; /* no pill rounding here */
+  border-radius: 30px !important;
 }
 
 /* Base line */
@@ -89,8 +118,13 @@
   transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-.navbar-toggler-icon::before { top: -7px; }
-.navbar-toggler-icon::after  { top: 7px; }
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
 
 /* Light variant */
 .navbar-dark .navbar-toggler-icon,
@@ -105,12 +139,14 @@
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
-  opacity: 0; /* hide top line */
+  opacity: 0;
+  /* hide top line */
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   transform: rotate(-90deg);
-  top: 0; /* align with middle line */
+  top: 0;
+  /* align with middle line */
 }
 
 .custom-toggle.navbar-toggler {
@@ -118,6 +154,9 @@
   background: transparent;
   padding: .2rem .35rem;
 }
-.custom-toggle.navbar-toggler:focus { box-shadow: none; outline: 2px solid #ff6a2a; outline-offset: 2px; }
 
-
+.custom-toggle.navbar-toggler:focus {
+  box-shadow: none;
+  outline: 2px solid #ff6a2a;
+  outline-offset: 2px;
+}

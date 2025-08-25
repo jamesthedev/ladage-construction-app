@@ -21,14 +21,15 @@ const AppNavbar: React.FC = () => {
           {/* Left: Brand with logo + text */}
           <Navbar.Brand href="./" className="fw-bold text-dark d-flex align-items-center brand">
             <img
-              src="./ladage-logo.jpg"
-              alt="Ladage Construction logo"
+              src="./ladage-logo-transparent-notext.png"
+              alt="LC logo"
               className="brand-logo me-2"
             />
-            <span className="brand-text">{/* populated in Navbar.css */}</span>
+            <span className="brand-name">LADAGE</span>
+            <span className="brand-sub">CONSTRUCTION</span>
+            <span className="brand-sub brand-sub-short">CONST.</span>
           </Navbar.Brand>
 
-          {/* Custom hamburger (uses hamburger-react) */}
           <Navbar.Toggle
             aria-controls="mainNav"
             aria-label="Toggle navigation"
@@ -37,21 +38,21 @@ const AppNavbar: React.FC = () => {
             <Hamburger
               toggled={expanded}
               toggle={setExpanded}
-              size={22}                 // tweak size if needed
+              size={22}
               duration={0.25}
-              color="#2b2b2b"           // use #fff if you switch to dark bg
+              color="#2b2b2b"
               rounded
             />
           </Navbar.Toggle>
 
-          {/* Right: links (Home, Our Work, Contact Us) */}
+          {/* Right: links */}
           <Navbar.Collapse id="mainNav">
             <Nav className="ms-auto align-items-lg-center gap-lg-3">
               <Nav.Link href="./" onClick={close} className="text-dark fw-semibold text-nowrap">
                 Home
               </Nav.Link>
-              <Nav.Link href="./ourwork" onClick={close} className="text-dark fw-semibold text-nowrap">
-                Our Work
+              <Nav.Link href="./gallery" onClick={close} className="text-dark fw-semibold text-nowrap">
+                Gallery
               </Nav.Link>
               <a
                 href="./contact"
