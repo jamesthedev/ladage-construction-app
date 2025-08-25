@@ -17,23 +17,22 @@ const AppNavbar: React.FC = () => {
         expanded={expanded}
         onToggle={(val) => setExpanded(!!val)}
       >
-        <Container fluid>
+        <Container fluid className="ladage-nav-container">
           {/* Left: Brand with logo + text */}
-          <Navbar.Brand href="./" className="fw-bold text-dark d-flex align-items-center brand">
+          <Navbar.Brand href="./" className="fw-bold text-dark d-flex align-items-center brand ladage-branding">
             <img
               src="./ladage-logo-transparent-notext.png"
               alt="LC logo"
               className="brand-logo me-2"
             />
-            <span className="brand-name">LADAGE</span>
-            <span className="brand-sub">CONSTRUCTION</span>
-            <span className="brand-sub brand-sub-short">CONST.</span>
+            <span className="brand-name">LADAGE CONSTRUCTION</span>
+            <span className="brand-name-short">LADAGE CONST.</span>
           </Navbar.Brand>
 
           <Navbar.Toggle
             aria-controls="mainNav"
             aria-label="Toggle navigation"
-            className="ms-auto custom-toggle"
+            className="ms-auto custom-toggle mobile-hamburger"
           >
             <Hamburger
               toggled={expanded}
