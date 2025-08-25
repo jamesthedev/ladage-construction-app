@@ -4,19 +4,22 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "tsc -b && vite build && copy dist\\index.html dist\\404.html && gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
     "framer-motion": "^12.23.12",
+    "hamburger-react": "^2.5.2",
     "lucide-react": "^0.536.0",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
+    "react-masonry-css": "^1.0.16",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.6.3",
     "yet-another-react-lightbox": "^3.24.0"

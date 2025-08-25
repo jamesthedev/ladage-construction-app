@@ -7,14 +7,14 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column min-vh-100 app-container bg-light">
       <Navbar />
 
-      <div className="flex-grow-1" style={{ paddingTop: '72px' }}>
+      <div className="flex-grow-1 app-main" style={{ paddingTop: '72px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ourwork" element={<div className="container"><OurWork /></div>} />
-          <Route path="/contact" element={<div className="container"><Contact /></div>} />
+          <Route path="/gallery" element={<OurWork />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
 

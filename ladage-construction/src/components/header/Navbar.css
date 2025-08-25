@@ -1,0 +1,162 @@
+/* Floating pillbox */
+.floating-nav {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1030;
+}
+
+.pillbar {
+  border-radius: 9999px;
+  padding: .5rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  /* lighter & semi-transparent */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+  backdrop-filter: blur(8px) saturate(180%);
+}
+
+/* Link hover */
+.pillbar .nav-link {
+  padding: .5rem .75rem;
+  border-radius: 9999px;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.pillbar .nav-link:hover,
+.pillbar .nav-link:focus {
+  background: rgba(0, 0, 0, .05);
+  color: #000;
+}
+
+.brand-logo {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-name, .brand-name-short {
+  font-family: "Bodoni Moda", "Abril Fatface", serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-size: 1.25rem;
+}
+
+.brand-name-short {
+  display: none;
+}
+
+/* On small screens shorten text */
+@media (max-width: 435px) {
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-logo {
+    height: 30px;
+  }
+}
+
+/* On very small screens hide text */
+@media (max-width: 374px) {
+  .brand-name {
+    display: none;
+  }
+  .brand-name-short {
+    display: inline;
+    font-size: 0.8rem;
+  }
+}
+
+/* Reset collapse area so it fills properly */
+.pillbar .navbar-collapse {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+}
+
+/* Nav inside collapse */
+.pillbar {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 30px !important;
+}
+
+/* Base line */
+.navbar-toggler-icon {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--bs-gray-800);
+  transition: transform 0.3s ease;
+}
+
+/* Top + bottom bars */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--bs-gray-800);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
+
+/* Light variant */
+.navbar-dark .navbar-toggler-icon,
+.navbar-dark .navbar-toggler-icon::before,
+.navbar-dark .navbar-toggler-icon::after {
+  background-color: var(--bs-gray-100);
+}
+
+/* Open state (turns into X) */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  opacity: 0;
+  /* hide top line */
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  transform: rotate(-90deg);
+  top: 0;
+  /* align with middle line */
+}
+
+.custom-toggle.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: .2rem .35rem;
+}
+
+.custom-toggle.navbar-toggler:focus {
+  box-shadow: none;
+  outline: 2px solid #ff6a2a;
+  outline-offset: 2px;
+}
+
+.ladage-branding {
+  margin-right: 0;
+}
+
+.mobile-hamburger {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ladage-nav-container {
+  padding: 0;
+}
