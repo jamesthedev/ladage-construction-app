@@ -35,7 +35,7 @@
   object-fit: contain;
 }
 
-.brand-name {
+.brand-name, .brand-name-short {
   font-family: "Bodoni Moda", "Abril Fatface", serif;
   font-weight: 900;
   letter-spacing: 0.02em;
@@ -43,27 +43,14 @@
   font-size: 1.25rem;
 }
 
-.brand-sub {
-  margin-left: 0.25rem;
-  font-family: "Bodoni Moda", "Abril Fatface", serif;
-  font-weight: 600;
-  letter-spacing: 0.35em;
-  font-size: 0.75rem;
-  line-height: 1;
-}
-
-.brand-sub-short {
+.brand-name-short {
   display: none;
 }
 
 /* On small screens shorten text */
-@media (max-width: 462px) {
+@media (max-width: 435px) {
   .brand-name {
-    font-size: 0.9rem;
-  }
-
-  .brand-sub {
-    font-size: 0.4rem;
+    font-size: 1rem;
   }
 
   .brand-logo {
@@ -72,13 +59,13 @@
 }
 
 /* On very small screens hide text */
-@media (max-width: 360px) {
-  .brand-sub {
+@media (max-width: 374px) {
+  .brand-name {
     display: none;
   }
-
-  .brand-sub-short {
+  .brand-name-short {
     display: inline;
+    font-size: 0.8rem;
   }
 }
 
@@ -159,4 +146,17 @@
   box-shadow: none;
   outline: 2px solid #ff6a2a;
   outline-offset: 2px;
+}
+
+.ladage-branding {
+  margin-right: 0;
+}
+
+.mobile-hamburger {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ladage-nav-container {
+  padding: 0;
 }
