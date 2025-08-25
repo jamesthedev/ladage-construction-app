@@ -29,27 +29,10 @@
   color: #000;
 }
 
-/* Brand image sizing */
 .brand-logo {
-  height: 28px;
+  height: 35px;
   width: auto;
   object-fit: contain;
-}
-
-@media (min-width: 992px) {
-  .brand-logo {
-    height: 32px;
-  }
-}
-
-@media (max-width: 992px) {
-  .pillbar {
-    padding: 0.3rem 0.3rem !important;
-  }
-
-  .btn-accent {
-    margin-bottom: 0.5rem;
-  }
 }
 
 .brand-name {
@@ -69,21 +52,33 @@
   line-height: 1;
 }
 
+.brand-sub-short {
+  display: none;
+}
+
 /* On small screens shorten text */
-@media (max-width: 410px) {
+@media (max-width: 462px) {
   .brand-name {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .brand-sub {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
+  }
+
+  .brand-logo {
+    height: 30px;
   }
 }
 
 /* On very small screens hide text */
-@media (max-width: 344px) {
+@media (max-width: 360px) {
   .brand-sub {
     display: none;
+  }
+
+  .brand-sub-short {
+    display: inline;
   }
 }
 

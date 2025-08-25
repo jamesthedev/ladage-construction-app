@@ -21,12 +21,13 @@ const AppNavbar: React.FC = () => {
           {/* Left: Brand with logo + text */}
           <Navbar.Brand href="./" className="fw-bold text-dark d-flex align-items-center brand">
             <img
-              src="./ladage-logo.jpg"
-              alt="Ladage Construction logo"
+              src="./ladage-logo-transparent-notext.png"
+              alt="LC logo"
               className="brand-logo me-2"
             />
             <span className="brand-name">LADAGE</span>
             <span className="brand-sub">CONSTRUCTION</span>
+            <span className="brand-sub brand-sub-short">CONST.</span>
           </Navbar.Brand>
 
           <Navbar.Toggle

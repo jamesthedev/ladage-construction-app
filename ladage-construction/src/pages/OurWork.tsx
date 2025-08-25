@@ -48,7 +48,7 @@ const Gallery: React.FC = () => {
   return (
     <>
       <section className="container py-5">
-        <div className="text-center mb-5">
+        <div className="text-center mb-5 our-work-header">
           <h2 className="text-center mb-3">Our Work</h2>
           <p className="text-muted">
             A showcase of projects we're proud to share.
@@ -58,15 +58,15 @@ const Gallery: React.FC = () => {
         {/* Category Buttons with full-width background */}
         <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", background: "#f8f9fa" }} className="bg-light">
           <FadeInSection delay={0.4}>
-            <div className="container py-3">
+            <div className="container">
               {/* Category Buttons */}
-              <div className="d-flex justify-content-center mb-4 flex-wrap gap-2">
+              <div className="d-flex justify-content-center flex-wrap gap-2">
                 {categories.map((cat) => (
                   <button
                     key={cat.key}
                     className={`category-buttons btn rounded-pill ${activeCategory === cat.key
                       ? "btn-primary text-white"
-                      : "btn-outline-primary btn-primary-inactive"
+                      : "btn-outline-primary"
                       }`}
                     onClick={() => setActiveCategory(cat.key)}
                   >
@@ -78,9 +78,8 @@ const Gallery: React.FC = () => {
           </FadeInSection>
         </div>
 
-        {/* Masonry Gallery with full-width background */}
-        <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", background: "#f8f9fa" }}>
-          <FadeUpSection delay={0.7}>
+        <div>
+          <FadeUpSection delay={0.5}>
             <div className="container py-4">
               <Masonry
                 breakpointCols={breakpointColumnsObj}
@@ -101,7 +100,7 @@ const Gallery: React.FC = () => {
           </FadeUpSection>
         </div>
       </section>
-      <CallToAction />
+      <div className="gallery-call-to-action"><CallToAction /></div>
     </>
   );
 };

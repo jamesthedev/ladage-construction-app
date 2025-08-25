@@ -9,9 +9,9 @@ body {
 }
 
 .my-masonry-grid {
-  display: flex; 
+  display: flex;
   margin-left: -1rem;
-  width: auto; 
+  width: auto;
 }
 
 .my-masonry-grid_column {
@@ -26,7 +26,7 @@ body {
 .about-us-wrapper {
   position: relative;
   color: white;
-  background-color: rgba(0,0,0,0.95) !important; 
+  background-color: rgba(0, 0, 0, 0.95) !important;
   z-index: 0;
 }
 
@@ -52,6 +52,7 @@ body {
   border-color: var(--accent);
   color: #fff;
 }
+
 .btn-accent:hover,
 .btn-accent:focus,
 .btn-orange:active,
@@ -80,8 +81,8 @@ body {
 }
 
 .contact-card {
-  max-width: 800px;              
-  min-width: var(--navbar-min);  
+  max-width: 800px;
+  min-width: var(--navbar-min);
   border-radius: 1rem;
   border: none;
   margin: 1rem;
@@ -90,4 +91,69 @@ body {
 .featured-carousel {
   max-height: 350px;
   object-fit: cover;
+}
+
+.gallery-call-to-action {
+  margin-top: 80px;
+}
+
+.btn-primary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #495057 !important;
+  border-color: #43494e !important;
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  background-color: #adb5bd;
+  border-color: #adb5bd;
+}
+
+.btn-outline-primary {
+  color: #6c757d;
+  border-color: #6c757d;
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #e9ecef;
+  color: #5a6268;
+  border-color: #5a6268;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+  background-color: #dee2e6 !important;
+  color: #495057 !important;
+  border-color: #495057 !important;
+}
+
+.btn-outline-primary:disabled,
+.btn-outline-primary[disabled] {
+  color: #adb5bd;
+  border-color: #adb5bd;
+  background-color: transparent;
+}
+
+.our-work-header {
+  padding-bottom: 0.75rem !important;
 }
