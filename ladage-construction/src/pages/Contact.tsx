@@ -51,6 +51,7 @@ const Contact: React.FC = () => {
       setTimeout(() => {
         setSubmitted(true);
         setIsSubmitting(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 500);
     }
   };
@@ -70,7 +71,7 @@ const Contact: React.FC = () => {
             Thank you! Your message has been sent.
           </Alert>
         ) : (
-          <Form autoComplete="on" onSubmit={handleSubmit} noValidate>
+          <Form onSubmit={handleSubmit} noValidate>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>
                 Name <span className="text-danger fw-bold">*</span>
@@ -81,7 +82,7 @@ const Contact: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 isInvalid={!!formErrors.name}
-                autoComplete="name"
+                autoComplete="name"   
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.name}
@@ -98,7 +99,7 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 isInvalid={!!formErrors.email}
-                autoComplete="email"
+                autoComplete="email"  
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.email}
@@ -115,7 +116,8 @@ const Contact: React.FC = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 isInvalid={!!formErrors.phone}
-                autoComplete="tel"
+                autoComplete="tel"   
+                inputMode="tel"     
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.phone}
@@ -133,7 +135,7 @@ const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 isInvalid={!!formErrors.message}
-                autoComplete="on"
+                autoComplete="off" 
               />
               <Form.Control.Feedback type="invalid">
                 {formErrors.message}

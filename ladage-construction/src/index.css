@@ -86,3 +86,8 @@ body {
   border: none;
   margin: 1rem;
 }
+
+.featured-carousel {
+  max-height: 350px;
+  object-fit: cover;
+}
