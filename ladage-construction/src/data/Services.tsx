@@ -11,7 +11,7 @@ const services = [
   },
   {
     title: "Outdoor Structures",
-    description: "Decks, porches, patios, and more — built to last and impress.",
+    description: "Decks, porches, patios, and more - built to last and impress.",
     icon: "🌳",
   },
 ];

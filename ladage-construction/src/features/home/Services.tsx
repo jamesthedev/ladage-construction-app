@@ -4,7 +4,7 @@ import FadeUpSection from '../../components/animations/FadeUpSection';
 function Services() {
   return (
     <FadeUpSection>
-      <section className="py-5 bg-white text-center">
+      <section className="py-5 bg-light text-center">
         <div className="container">
           <h2 className="fw-bold mb-4">Our Services</h2>
           <div className="row">
